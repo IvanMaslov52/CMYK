@@ -1,0 +1,615 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+.header-margin {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background: #888888;
+}
+
+.ssilka {
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s
+}
+
+.ssilka:hover {
+  color: black;
+}
+
+.nav_roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.li-nav {
+  width: 150px;
+  display: inline-block;
+}
+
+.size2 {
+  padding: 0 50px;
+  margin-bottom: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #222222;
+}
+
+.title_color {
+  background: #555555;
+
+}
+
+.nav_color {
+  position: sticky;
+  top: 0;
+  border-radius: 0 0 20px 20px;
+  background: #555555;
+}
+
+.size1 {
+  width: 1440px;
+  background: #999999;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.header-import {
+  display: flex;
+}
+
+.left1 {
+  margin-left: 120px;
+  align-self: center;
+}
+
+#contacts {
+  margin-top: 0;
+}
+
+.code-background {
+  background: #222222;
+}
+
+#code {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.pre-none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#education {
+  margin-top: 0
+}
+
+
+.indent {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.photo {
+  width: 400px;
+  height: 300px;
+  padding: 0 25px;
+}
+
+.image_indent {
+  padding: 0 25px;
+}
+
+.image_center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.spec_table {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+table {
+  width: 500px; /* Ширина таблицы */
+  margin: auto;
+  border-style: solid;
+  border-color: black;
+  border-collapse: collapse;
+}
+
+td {
+  border-style: solid;
+  border-color: black;
+  text-align: center; /* Выравниваем текст по центру ячейки */
+}
+
+th {
+  border-style: solid;
+  border-color: black;
+}
+
+.dropbtn {
+  font-family: 'Roboto', sans-serif;
+  background-color: #555555;
+  color: white;
+  padding: 10px 0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.5s
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #999999;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #999999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: black
+}
+
+
+.c-button {
+  appearance: none;
+  border: 0;
+  border-radius: 15px;
+  background: #fff;
+  color: black;
+  padding: 8px 16px;
+  font-size: 15px;
+}
+
+.border_rad {
+  border-radius: 20px;
+}
+
+.rad {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+/* Позиционируем палитру так, чтобы она располагалась в правом верхнем углу страницы */
+.color-panel {
+  position: absolute; /* задаем абсолютное позиционирование */
+  top: 0px; /* прижимаем палитру к верхней части страницы  */
+  right: 10px; /* создаем внешний отступ справа */
+  background-color: #fff;
+  height: 60px;
+  padding: 15px 5px 5px 5px; /* задаем внутренние отступы */
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35); /* добавим тень*/
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 0px 0px 30px 30px; /* закруглим края панели */
+}
+
+/* Зададим размеры ячейкам таблицы, закруглим их и прижмем к левому краю панели */
+.color-panel div {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  float: left;
+  margin: 5px;
+}
+
+
+
+.icon {
+  width: 32px;
+  height: 32px;
+  background: #999999;
+}
+
+.img_button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  margin: 3px;
+}
+
+.img_button:hover {
+  outline: 2px solid black;
+}
+
+
+
+.subject_label {
+  width: 150px;
+}
+
+label {
+  float: left;
+  padding-right: 10px;
+}
+
+
+*[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
+  background-position: left .7em top 50%, 0 0;
+  padding: .6em .8em .5em 1.4em;
+}
+
+
+
+input {
+  width: 200px;
+  font-size: 13px;
+  padding: 6px 0 4px 10px;
+  border: 1px solid #cecece;
+  background: #F6F6f6;
+  border-radius: 8px;
+  margin: 3px;
+}
+.somelabel
+{
+  width: 90px;
+}
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 25px;
+  margin: 0 15px 15px 0;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #444;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  transition: box-shadow 0.2s;
+}
+.btn:focus-visible {
+  border: 1px solid #4c51f9;
+  outline: none;
+}
+.btn:hover {
+  transition: all 0.2s;
+  box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btn:active {
+  background-color: #808080;
+}
+.btn:disabled {
+  background-color: #eee;
+  border-color: #eee;
+  color: #444;
+  cursor: not-allowed;
+}
+#rgb{
+  padding: 5px;
+  margin: 5px;
+}

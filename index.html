@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.js"></script>
+  <script data-src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+ <div class="size1">
+
+   <div class="nav_color">
+     <div class="size2">
+       <div class="header-margin">
+         <div class="roboto">
+           <nav class="header-nav">
+             <p>Welcome to my CMYK to RGB convertor</p>
+           </nav>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+<div class="size2">
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/w3color.js"></script>
+  <form id="someform">
+    <div><label class="somelabel">Cyan</label><input name="id1" id="id1" type="number"/></div>
+    <div><label class="somelabel">Magenta</label><input  name="id2" id="id2" type="number" /></div>
+    <div><label class="somelabel">Yellow</label><input name="id3" id="id3" type="number" /></div>
+    <div><label class="somelabel">Key</label><input name="id4" id="id4" type="number" /></div>
+    <div><button type="button" onclick="convert()" class="btn">Convert</button></div>
+  </form>
+
+  <div id="example"  data-w3-color="cmyk(23%,12%,54%,12%)">
+    <p>CMYK to RGB</p><p id="rgb"></p>
+    </div>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+
+  <script>w3SetColorsByAttribute();</script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </div>
+   <footer>
+     <a href="https://github.com/Papagoth"><img alt="logo_1" src="/resources/image/image_1.png"></a>
+     <span>CREATED IN 2023</span>
+   </footer>
+</div>
+
+</body>
+
+</html>
